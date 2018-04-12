@@ -16,5 +16,36 @@
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
+    <button class="btn btn-link" type="button" data-toggle="modal" data-target="#loginModal">Login</button>
   </div>
 </nav>
+
+<!-- Login Modal-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title lead">Please enter your login credentials</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="loginForm" novalidate>
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="text" formControlName="loginEmail" class="form-control" id="formGroupInput" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input type="password" formControlName="loginPassword" class="form-control" id="formGroupInput2" placeholder="Your Password">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-link">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

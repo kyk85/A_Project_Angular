@@ -1,14 +1,20 @@
 <div class="jumbotron main">
-  <h1 class="display-4">Hello, world!</h1>
+  <h1 class="display-4">Contact Us</h1>
+  <p class="lead">If you have any inquiries, fill out the form below and we'll get back to you!</p>
   <hr>
-  <form [formGroup]="contactForm" novalidate>
-    <div class="form-group">
-      <label>Example label</label>
-      <input type="text" formControlName="contactName" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  <form [formGroup]="contactForm" action="/inquiry" method="post" novalidate>
+    <div class="form-group col-5">
+      <label>Name</label>
+      <input type="text" formControlName="contactName" class="form-control" name="name" placeholder="How you would like to be addressed">
     </div>
-    <div class="form-group">
-      <label>Another label</label>
-      <input type="text" formControlName="contactEmail" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    <div class="form-group col-5">
+      <label>Email</label>
+      <input type="text" formControlName="contactEmail" class="form-control" name="email" id="formGroupInput2" placeholder="Your Email">
     </div>
+    <div class="form-group col-5">
+      <label>What would you like to inquire about?</label>
+      <textarea formControlName="contactEmail" class="form-control" name="inquiry"></textarea>
+    </div>
+    <button type="button" class="btn btn-primary mx-3">Submit</button>
   </form>
 </div>

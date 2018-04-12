@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public loginForm: FormGroup;
+
+  constructor(public formBuilder: FormBuilder) {
+    this.loginForm = formBuilder.group({
+      loginEmail: [''],
+      loginPassword: [''],
+    });
+  }
 
   ngOnInit() {
   }

@@ -1,14 +1,14 @@
 #main {
-    height: 350px;
+    height: 340px;
 }
 
 #backgroundImage {
     background: url('../../assets/img/books-2007660_1920.jpg');
     background-color: #cccccc;
     background-repeat: repeat;
-    opacity: 0.2;
+    opacity: 0.1;
     position: absolute;
-    height:330px;
+    height:340px;
     width:100%
 }
 

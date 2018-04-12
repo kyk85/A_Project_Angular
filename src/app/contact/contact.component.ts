@@ -14,8 +14,9 @@ export class ContactComponent implements OnInit {
 
     this.contactForm = formBuilder.group({
       contactName: [''],
-      contactEmail: ['']
-  });
+      contactEmail: [''],
+      contactInquiry: ['']
+    });
 
   }
 
