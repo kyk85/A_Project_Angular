@@ -23,4 +23,8 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+  login() {
+    console.log('it worked!');
+  }
+
 }

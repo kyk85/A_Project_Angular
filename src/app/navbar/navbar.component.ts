@@ -10,6 +10,8 @@ export class NavbarComponent implements OnInit {
 
   public loginForm: FormGroup;
 
+  user = [];
+
   constructor(public formBuilder: FormBuilder) {
     this.loginForm = formBuilder.group({
       loginEmail: [''],
@@ -18,6 +20,10 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  login() {
+    console.log(this.user);
   }
 
 }

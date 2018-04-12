@@ -2,18 +2,18 @@
   <h1 class="display-4">Contact Us</h1>
   <p class="lead">If you have any inquiries, fill out the form below and we'll get back to you!</p>
   <hr>
-  <form [formGroup]="contactForm" action="/inquiry" method="post" novalidate>
+  <form [formGroup]="contactForm" novalidate>
     <div class="form-group col-5">
       <label>Name</label>
-      <input type="text" formControlName="contactName" class="form-control" name="name" placeholder="How you would like to be addressed">
+      <input type="text" formControlName="contactName" class="form-control" id="name" placeholder="How you would like to be addressed">
     </div>
     <div class="form-group col-5">
       <label>Email</label>
-      <input type="text" formControlName="contactEmail" class="form-control" name="email" id="formGroupInput2" placeholder="Your Email">
+      <input type="text" formControlName="contactEmail" class="form-control" id="email" id="formGroupInput2" placeholder="Your Email">
     </div>
     <div class="form-group col-5">
       <label>What would you like to inquire about?</label>
-      <textarea formControlName="contactEmail" class="form-control" name="inquiry"></textarea>
+      <textarea formControlName="contactEmail" class="form-control" id="inquiry"></textarea>
     </div>
     <button type="button" class="btn btn-primary mx-3">Submit</button>
   </form>
