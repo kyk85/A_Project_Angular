@@ -35,16 +35,16 @@
         <form [formGroup]="loginForm" ng-submit="login()" novalidate>
           <div class="form-group">
             <label>Email:</label>
-            <input type="text" [(ngModel)]="user.email" formControlName="loginEmail" class="form-control" id="email" placeholder="Your Email">
+            <input type="text" [(ngModel)]="user.email" formControlName="email" class="form-control" id="email" placeholder="Your Email">
           </div>
           <div class="form-group">
             <label>Password:</label>
-            <input type="password" [(ngModel)]="user.password" formControlName="loginPassword" class="form-control" id="password" placeholder="Your Password">
+            <input type="password" [(ngModel)]="user.password" formControlName="password" class="form-control" id="password" placeholder="Your Password">
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-link"  (click)="login()">Login</button>
+        <button type="submit" class="btn btn-link" data-dismiss="modal" (click)="login()">Login</button>
       </div>
     </div>
   </div>

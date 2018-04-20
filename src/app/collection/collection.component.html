@@ -1,0 +1,13 @@
+<app-user-navbar></app-user-navbar>
+
+<div class="list-group list-group-flush" >
+  <ul>
+    <li class="list-group-item" *ngFor="let collectionItem of collectionItems">
+    <img src="{{collectionItem.coverArt}}" style="width:128px; height:195px">
+    {{collectionItem.title}}
+    by, {{collectionItem.author}}
+    </li>
+  </ul>
+</div>
+
+

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -12,10 +14,12 @@ export class NavbarComponent implements OnInit {
 
   user = [];
 
-  constructor(public formBuilder: FormBuilder) {
+  constructor(public formBuilder: FormBuilder,
+              public router: Router,
+              public authService: AuthService) {
     this.loginForm = formBuilder.group({
-      loginEmail: [''],
-      loginPassword: [''],
+      email: [''],
+      password: [''],
     });
   }
 
@@ -23,7 +27,14 @@ export class NavbarComponent implements OnInit {
   }
 
   login() {
-    console.log(this.user);
+    const credentials = this.loginForm.value;
+    console.log(credentials);
+
+    this.authService.login(credentials).then((result) => {
+      this.router.navigateByUrl('/collection');
+    }).catch(error => {
+      console.log(error);
+    });
   }
 
 }
